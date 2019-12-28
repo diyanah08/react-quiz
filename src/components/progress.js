@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Progress(props) {
     return(
-        <h2>
+        <h3>
             Question {props.current} of {props.total}
-        </h2>
+        </h3>
     );
 
 }
