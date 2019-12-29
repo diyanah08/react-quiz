@@ -28,6 +28,7 @@ h3 {
   font-size: 18px;
   color: darkred;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .answer {
@@ -46,8 +47,8 @@ h3 {
   cursor: pointer;
 }
 
-.answer:selected {
-  background-color: white;
+.answer.selected {
+  background-color: aquamarine;
 }
 
 .submit {
