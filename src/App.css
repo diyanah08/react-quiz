@@ -19,19 +19,8 @@ h1 {
 h3 {
   background-color: azure;
   padding: 10px;
-  width: 500px;
+  width: 70vw;
   text-align: center;
-}
-
-.answer {
-  background-color: azure;
-  margin-top: 15px;
-  padding: 20px;
-  width: 500px;
-  position: relative;
-  font-family: inherit;
-  border: 2px black solid;
-  box-shadow: none;
 }
 
 .options {
@@ -41,11 +30,36 @@ h3 {
   font-weight: bold;
 }
 
+.answer {
+  background-color: azure;
+  margin-top: 15px;
+  padding: 20px;
+  width: 70vw;
+  position: relative;
+  font-family: inherit;
+  border: 2px black solid;
+  box-shadow: none;
+}
+
+.answer:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.answer:selected {
+  background-color: white;
+}
+
 .submit {
+  width: 25vw;
   margin: 15px;
   padding: 10px;
   font-family: inherit;
-  width: 250px;
+  font-weight: bold;
   background-color: coral;
   border: 2px black solid;
+}
+
+.submit:hover {
+  cursor: pointer;
 }
