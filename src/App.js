@@ -11,6 +11,7 @@ function App() {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentAnswer, setCurrentAnswer] = useState('');
+  const [answers, setAnswers] = useState([]);
 
   const question = quizQuestions[currentQuestion];
   
@@ -18,12 +19,25 @@ function App() {
       setCurrentAnswer(e.target.value);
   };
 
+  const confirmButton = () => {
+    const answer = {questionId: question.id, answer: currentAnswer};
+
+    answers.push(answer);
+    setAnswers(answers);
+    setCurrentAnswer('');
+
+    if (currentQuestion + 1 < quizQuestions.length) {
+      setCurrentQuestion(currentQuestion + 1);
+      return;
+    }
+  }
+
   return (
     <div className="container">
-      <Progress total="3" current="1"/>
+      <Progress total={quizQuestions.length} current={currentQuestion + 1}/>
       <Question question={question.question}/>
       <Answers question ={question} currentAnswer={currentAnswer} handleClick={handleClick}/>
-      <button className="submit">Confirm</button>
+      <button className="submit" onClick={confirmButton}>Confirm</button>
     </div>
   );
 }
