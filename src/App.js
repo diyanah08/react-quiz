@@ -12,6 +12,7 @@ function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentAnswer, setCurrentAnswer] = useState('');
   const [answers, setAnswers] = useState([]);
+  const [error, setError] = useState('');
 
   const question = quizQuestions[currentQuestion];
   
@@ -19,8 +20,21 @@ function App() {
       setCurrentAnswer(e.target.value);
   };
 
+  const noClick = () => {
+    if (!error) {
+      return;
+    }
+
+    return <div className="error">{error}</div>
+  }
+
   const confirmButton = () => {
     const answer = {questionId: question.id, answer: currentAnswer};
+
+    if (!currentAnswer) {
+      setError("You didn't click an answer!");
+      return;
+    }
 
     answers.push(answer);
     setAnswers(answers);
@@ -37,6 +51,7 @@ function App() {
       <Progress total={quizQuestions.length} current={currentQuestion + 1}/>
       <Question question={question.question}/>
       <Answers question ={question} currentAnswer={currentAnswer} handleClick={handleClick}/>
+      {noClick()}
       <button className="submit" onClick={confirmButton}>Confirm</button>
     </div>
   );

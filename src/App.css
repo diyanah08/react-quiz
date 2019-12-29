@@ -12,7 +12,7 @@
 
 h1 {
   font-size: 30px;
-  color: coral;
+  color: deepskyblue;
   font-weight: bolder;
 }
 
@@ -57,10 +57,16 @@ h3 {
   padding: 10px;
   font-family: inherit;
   font-weight: bold;
-  background-color: coral;
+  background-color: palegoldenrod;
   border: 2px black solid;
 }
 
 .submit:hover {
   cursor: pointer;
+}
+
+.error {
+  color: tomato;
+  font-family: Impact;
+  margin-top: 15px;
 }
