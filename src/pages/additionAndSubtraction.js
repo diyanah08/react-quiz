@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import Progress from "../components/progress.js"
 import Question from "../components/question.js"
 import Answers from "../components/answers.js"
-import {quizQuestions} from "../questionsAPI/quizQuestions.js"
+import {addSubtractQuestions} from "../questionsAPI/addSubtractQuestions"
 
 import '../App.css';
 
@@ -15,7 +15,7 @@ function AdditionAndSubtraction() {
   const [error, setError] = useState('');
   const [showResults, setShowResults] = useState(false);
 
-  const question = quizQuestions[currentQuestion];
+  const question = addSubtractQuestions[currentQuestion];
   
   const handleClick = e => {
       setCurrentAnswer(e.target.value);
@@ -42,7 +42,7 @@ function AdditionAndSubtraction() {
     setAnswers(answers);
     setCurrentAnswer('');
 
-    if (currentQuestion + 1 < quizQuestions.length) {
+    if (currentQuestion + 1 < addSubtractQuestions.length) {
       setCurrentQuestion(currentQuestion + 1);
       return;
     }
@@ -67,7 +67,7 @@ function AdditionAndSubtraction() {
 
   const resultsTotal = () => {
     return answers.map ( answer => {
-      const question = quizQuestions.find(
+      const question = addSubtractQuestions.find(
         question => question.id === answer.questionId
       );
 
@@ -88,7 +88,7 @@ function AdditionAndSubtraction() {
   } else {
     return (
       <div className="container">
-        <Progress total={quizQuestions.length} current={currentQuestion + 1}/>
+        <Progress total={addSubtractQuestions.length} current={currentQuestion + 1}/>
         <Question question={question.question}/>
         <Answers question ={question} currentAnswer={currentAnswer} handleClick={handleClick}/>
         {noClick()}

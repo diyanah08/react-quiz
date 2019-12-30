@@ -1,4 +1,4 @@
-export const quizQuestions = [
+export const numbersQuestions = [
     {
         id: 1,
         question: 'What is 1 x 1?',
@@ -28,4 +28,4 @@ export const quizQuestions = [
     },
   ];
    
-  export default {quizQuestions};
+  export default {numbersQuestions};

@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 
-import Progress from "../components/progress.js"
-import Question from "../components/question.js"
-import Answers from "../components/answers.js"
-import {multiplyDivideQuestions} from "../questionsAPI/multiplyDivideQuestions.js"
+import Progress from "./components/progress.js"
+import Question from "./components/question.js"
+import Answers from "./components/answers.js"
+import {quizQuestions} from "./questionsAPI/numbersQuestions.js/index.js"
 
-import '../App.css';
+import './App.css';
 
-function MultiplicationAndDivision() {
+function App() {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentAnswer, setCurrentAnswer] = useState('');
@@ -15,7 +15,7 @@ function MultiplicationAndDivision() {
   const [error, setError] = useState('');
   const [showResults, setShowResults] = useState(false);
 
-  const question = multiplyDivideQuestions[currentQuestion];
+  const question = quizQuestions[currentQuestion];
   
   const handleClick = e => {
       setCurrentAnswer(e.target.value);
@@ -42,7 +42,7 @@ function MultiplicationAndDivision() {
     setAnswers(answers);
     setCurrentAnswer('');
 
-    if (currentQuestion + 1 < multiplyDivideQuestions.length) {
+    if (currentQuestion + 1 < quizQuestions.length) {
       setCurrentQuestion(currentQuestion + 1);
       return;
     }
@@ -67,7 +67,7 @@ function MultiplicationAndDivision() {
 
   const resultsTotal = () => {
     return answers.map ( answer => {
-      const question = multiplyDivideQuestions.find(
+      const question = quizQuestions.find(
         question => question.id === answer.questionId
       );
 
@@ -88,7 +88,7 @@ function MultiplicationAndDivision() {
   } else {
     return (
       <div className="container">
-        <Progress total={multiplyDivideQuestions.length} current={currentQuestion + 1}/>
+        <Progress total={quizQuestions.length} current={currentQuestion + 1}/>
         <Question question={question.question}/>
         <Answers question ={question} currentAnswer={currentAnswer} handleClick={handleClick}/>
         {noClick()}
@@ -98,4 +98,4 @@ function MultiplicationAndDivision() {
   }
 }
 
-export default MultiplicationAndDivision;
+export default App;
