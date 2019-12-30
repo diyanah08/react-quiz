@@ -13,6 +13,7 @@ function App() {
   const [currentAnswer, setCurrentAnswer] = useState('');
   const [answers, setAnswers] = useState([]);
   const [error, setError] = useState('');
+  const [showResults, setShowResults] = useState(false);
 
   const question = quizQuestions[currentQuestion];
   
@@ -45,17 +46,29 @@ function App() {
       setCurrentQuestion(currentQuestion + 1);
       return;
     }
-  }
 
-  return (
-    <div className="container">
-      <Progress total={quizQuestions.length} current={currentQuestion + 1}/>
-      <Question question={question.question}/>
-      <Answers question ={question} currentAnswer={currentAnswer} handleClick={handleClick}/>
-      {noClick()}
-      <button className="submit" onClick={confirmButton}>Confirm</button>
-    </div>
-  );
+    setShowResults(true);
+  };
+
+  if (showResults) {
+    return (
+      <div className="container results">
+        <h2>Results</h2>
+      </div>
+    )
+
+
+  } else {
+    return (
+      <div className="container">
+        <Progress total={quizQuestions.length} current={currentQuestion + 1}/>
+        <Question question={question.question}/>
+        <Answers question ={question} currentAnswer={currentAnswer} handleClick={handleClick}/>
+        {noClick()}
+        <button className="submit" onClick={confirmButton}>Confirm</button>
+      </div>
+    );
+  }
 }
 
 export default App;
