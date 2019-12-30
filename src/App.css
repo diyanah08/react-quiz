@@ -1,4 +1,5 @@
 .container {
+  margin-bottom: 0px;
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
@@ -13,9 +14,18 @@
 }
 
 h1 {
+  padding: 20px;
   font-size: 30px;
   color: deepskyblue;
   font-weight: bolder;
+}
+
+h2 {
+  width: 70vw;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px black dotted;
+  font-size: 15px;
 }
 
 h3 {
@@ -28,15 +38,15 @@ h3 {
 .navbar{
   width: 100vw;
   min-height: 0px;
-  margin: 0px 15px 10px;
+  margin: 0px 15px 20px;
   text-decoration: none;
   list-style: none;
   text-align: center;
-  background-color: blanchedalmond;
+  background-color: powderblue;
 }
 
 .navbar-menu {
-  background-color: blanchedalmond;
+  background-color: powderblue;
 }
 
 .navbar-brand {
@@ -56,7 +66,7 @@ h3 {
 }
 
 .nav-item:hover .nav-link:hover {
-  color: deepskyblue;
+  color: white;
 }
 
 .nav-link:visited {
@@ -109,4 +119,14 @@ h3 {
   color: tomato;
   font-family: Impact;
   margin-top: 15px;
+}
+
+.correct {
+  color: gold;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: tomato;
+  font-weight: bold;
 }

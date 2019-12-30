@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 
+import Intro from "../components/intro.js"
 import Progress from "../components/progress.js"
 import Question from "../components/question.js"
 import Answers from "../components/answers.js"
@@ -88,6 +89,7 @@ function AdditionAndSubtraction() {
   } else {
     return (
       <div className="container">
+        <Intro/>
         <Progress total={addSubtractQuestions.length} current={currentQuestion + 1}/>
         <Question question={question.question}/>
         <Answers question ={question} currentAnswer={currentAnswer} handleClick={handleClick}/>
