@@ -23,7 +23,7 @@ h3 {
   text-align: center;
 }
 
-.navbar {
+/* .navbar {
   width: 95vw;
   margin-top: 25px;
   padding: 10px 0px;
@@ -50,7 +50,7 @@ h3 {
 
 .nav-link:visited {
   color: black;
-}
+} */
 
 .options {
   margin-right: 10px;

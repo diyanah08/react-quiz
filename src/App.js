@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bulma/css/bulma.css'
 
 import Nav from "./components/nav.js"
 import Welcome from "./pages/welcome.js"
