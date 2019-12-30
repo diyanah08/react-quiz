@@ -50,10 +50,37 @@ function App() {
     setShowResults(true);
   };
 
+  const restart = () => {
+    setAnswers([]);
+    setCurrentAnswer('');
+    setCurrentQuestion(0);
+    setShowResults(false);
+  }
+
+  const resultMark =  (question, answer) => {
+    if (question.correct_answer === answer.answer) {
+      return <span className = "correct">Correct</span>
+    } else {
+      return <span className = "incorrect">Incorrect</span>
+    }
+  }
+
+  const resultsTotal = () => {
+    return answers.map ( answer => {
+      const question = quizQuestions.find(
+        question => question.id === answer.questionId
+      );
+
+      return <div key = {question.id}> {question.question} - {resultMark(question, answer)}</div>
+    });
+  };
+
   if (showResults) {
     return (
       <div className="container results">
         <h2>Results</h2>
+        <ul>{resultsTotal()}</ul>
+        <button className="submit" onClick={restart}>Restart Quiz</button>
       </div>
     )
 
