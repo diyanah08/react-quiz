@@ -23,6 +23,35 @@ h3 {
   text-align: center;
 }
 
+.navbar {
+  width: 95vw;
+  margin-top: 25px;
+  padding: 10px 0px;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  background-color: floralwhite;
+}
+
+.nav-item {
+  display: inline;
+  color: black;
+  font-size: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav-item:hover .nav-link:hover {
+  color: white;
+}
+
+.nav-link:visited {
+  color: black;
+}
+
 .options {
   margin-right: 10px;
   font-size: 18px;
