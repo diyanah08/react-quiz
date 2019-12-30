@@ -18,14 +18,15 @@ function App() {
   
   const handleClick = e => {
       setCurrentAnswer(e.target.value);
+      setError('');
   };
 
   const noClick = () => {
-    if (!error) {
-      return;
+    if (error) {
+      return <div className="error">{error}</div>;
     }
 
-    return <div className="error">{error}</div>
+    return;
   }
 
   const confirmButton = () => {
