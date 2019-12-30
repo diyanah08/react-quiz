@@ -5,12 +5,11 @@ export default function Nav() {
     const [isActive, setisActive] = React.useState(false);
     
     return (
-    
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                {/* <a class="navbar-item" href="https://bulma.io">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-                </a> */}
+                INSERT LOGO
+                {/* <img src="https://bulma.io/images/bulma-logo.png" width="112px" height="18px"/> */}
+                
 
                 <div
                     onClick={() => {
@@ -34,7 +33,7 @@ export default function Nav() {
             className={`navbar-menu ${isActive ? "is-active" : ""}`}
             >
 
-                <div class="navbar-start">
+                <div className="navbar-start">
                     <li className="nav-item">
                         <Link to='/' className="nav-link">Home</Link>
                     </li>
@@ -47,11 +46,6 @@ export default function Nav() {
                     <li className="nav-item">
                         <Link to='/multiplication-and-division' className="nav-link">Multiplication and Division</Link>
                     </li>
-                </div>
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        Maths Is Fun!
-                    </div>
                 </div>
             </div>
         </nav>

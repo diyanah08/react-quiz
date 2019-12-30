@@ -1,9 +1,11 @@
 .container {
   min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: top;
+  text-align: center;
   background-color: #daeee5;
   color: black;
   font-family: "Comic Sans MS", cursive, sans-serif;
@@ -23,34 +25,43 @@ h3 {
   text-align: center;
 }
 
-/* .navbar {
-  width: 95vw;
-  margin-top: 25px;
-  padding: 10px 0px;
+.navbar{
+  width: 100vw;
+  min-height: 0px;
+  margin: 0px 15px 10px;
   text-decoration: none;
   list-style: none;
   text-align: center;
-  background-color: floralwhite;
+  background-color: blanchedalmond;
+}
+
+.navbar-menu {
+  background-color: blanchedalmond;
+}
+
+.navbar-brand {
+  padding: 0px 20px;
 }
 
 .nav-item {
-  display: inline;
   color: black;
   font-size: 15px;
+  padding-top: 15px;
 }
 
 .nav-link {
   text-decoration: none;
-  padding: 10px;
+  padding: 0px 40px;
+  text-align: center;
 }
 
 .nav-item:hover .nav-link:hover {
-  color: white;
+  color: deepskyblue;
 }
 
 .nav-link:visited {
   color: black;
-} */
+}
 
 .options {
   margin-right: 10px;
