@@ -34,7 +34,7 @@ export default function Nav() {
 
                 <div className="navbar-start">
                     <li className="nav-item">
-                        <Link to='/react-quiz' className="nav-link">Home</Link>
+                        <Link to='/react-quiz/' className="nav-link">Home</Link>
                     </li>
                     <li className="nav-item">
                         <Link to='/react-quiz/numbers-to-1000' className="nav-link">Numbers to 1000</Link>
