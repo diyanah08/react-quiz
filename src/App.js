@@ -23,18 +23,22 @@ class App extends React.Component {
                 <Nav/>
                 <Switch>
                 
-                <Route path='/numbers-to-1000'>
+                <Route path='/react-quiz/numbers-to-1000'>
                     <Numbers/>
                 </Route>
                 
-                <Route path='/addition-and-subtraction'>
+                <Route path='/react-quiz/addition-and-subtraction'>
                     <AdditionAndSubtraction/>
                 </Route>
                 
-                <Route path='/multiplication-and-division'>
+                <Route path='/react-quiz/multiplication-and-division'>
                     <MultiplicationAndDivision/>
                 </Route>
                 
+                <Route path='/react-quiz'>
+                    <Welcome/>
+                </Route>
+
                 <Route path='/'>
                     <Welcome/>
                 </Route>
