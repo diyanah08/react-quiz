@@ -7,8 +7,7 @@ export default function Nav() {
     return (
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                INSERT LOGO
-                {/* <img src="https://bulma.io/images/bulma-logo.png" width="112px" height="18px"/> */}
+                <img src = {require("../images/logo.jpg")} width="35px" height="18px"/> FUN MATHS
                 
 
                 <div
