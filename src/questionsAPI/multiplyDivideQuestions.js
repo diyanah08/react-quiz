@@ -19,12 +19,12 @@ export const multiplyDivideQuestions = [
     },
     {
         id: 3,
-        question: 'What is 50 - 10?',
+        question: 'What is 50 / 10?',
         answer_a: '40',
         answer_b: '20',
         answer_c: '60',
         answer_d: '5',
-        correct_answer: 'a',
+        correct_answer: 'd',
     },
   ];
    
