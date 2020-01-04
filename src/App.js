@@ -35,7 +35,7 @@ class App extends React.Component {
                     <MultiplicationAndDivision/>
                 </Route>
                 
-                <Route path='/react-quiz'>
+                <Route path='/react-quiz/'>
                     <Welcome/>
                 </Route>
 
