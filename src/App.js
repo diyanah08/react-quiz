@@ -23,7 +23,7 @@ class App extends React.Component {
                 <Nav/>
                 <Switch>
                 
-                <Route path='/react-quiz/numbers-to-1000'>
+                <Route path='/react-quiz/numbers-to-10000'>
                     <Numbers/>
                 </Route>
                 

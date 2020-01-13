@@ -37,7 +37,7 @@ export default function Nav() {
                         <Link to='/react-quiz/' className="nav-link">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to='/react-quiz/numbers-to-1000' className="nav-link">Numbers to 1000</Link>
+                        <Link to='/react-quiz/numbers-to-10000' className="nav-link">Numbers to 10 000</Link>
                     </li>
                     <li className="nav-item">
                         <Link to='/react-quiz/addition-and-subtraction' className="nav-link">Addition and Subtraction</Link>
